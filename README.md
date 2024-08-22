@@ -4,6 +4,12 @@
 - Configure Tailwind css
 - Login Form
 - Header
+- Routing of app
+- Form Validation
+- useRef Hook
+- firebase Setup
+- deploying app to production
+- 
 
 # Features
 
