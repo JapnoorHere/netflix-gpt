@@ -9,7 +9,10 @@
 - useRef Hook
 - firebase Setup
 - deploying app to production
-- 
+- Implement Sign in user API
+- Created redux store with user slice
+- Implemented Sign Out
+- Update Profile
 
 # Features
 
