@@ -3,12 +3,7 @@ import Header from './Header'
 import { checkValidateData } from '../utils/validate';
 import { auth } from '../utils/firebase';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
-import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { addUser } from '../utils/userSlice';
 const Login = () => {
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
     const [isSignInForm, setIsSignInForm] = useState(true);
     const email = useRef(null);
     const password = useRef(null);
@@ -40,14 +35,14 @@ const Login = () => {
                         photoURL: "https://www.pngkey.com/png/full/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png"
                     })
                     .then(() => {
-                        const {uid,email,displayName,photoURL} = auth.currentUser; 
-                        dispatch(addUser({
-                            uid: uid,
-                            email: email,
-                            displayName: displayName,
-                            photoURL: photoURL
-                        }))
-                        navigate('/browse');
+                        // const {uid,email,displayName,photoURL} = auth.currentUser; 
+                        // dispatch(addUser({
+                        //     uid: uid,
+                        //     email: email,
+                        //     displayName: displayName,
+                        //     photoURL: photoURL
+                        // }))
+                        // navigate('/browse');
                     })
 
                 }).catch((error) => {
@@ -60,15 +55,15 @@ const Login = () => {
         else {
             signInWithEmailAndPassword(auth, email.current.value, password.current.value)
                 .then((userCredential) => {
-                    console.log(userCredential.user);
-                    const {uid,email,displayName,photoURL} = userCredential.user; 
-                        dispatch(addUser({
-                            uid: uid,
-                            email: email,
-                            displayName: displayName,
-                            photoURL: photoURL
-                        }))
-                        navigate('/browse');
+                    // console.log(userCredential.user);
+                    // const {uid,email,displayName,photoURL} = userCredential.user; 
+                    //     dispatch(addUser({
+                    //         uid: uid,
+                    //         email: email,
+                    //         displayName: displayName,
+                    //         photoURL: photoURL
+                    //     }))
+                    //     navigate('/browse');
                 })
                 .catch((error) => {
                     const errorCode = error.code;
