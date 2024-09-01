@@ -1,34 +1,4 @@
 # Netflix GPT
 
-- Create React App
-- Configure Tailwind css
-- Login Form
-- Header
-- Routing of app
-- Form Validation
-- useRef Hook
-- firebase Setup
-- deploying app to production
-- Implement Sign in user API
-- Created redux store with user slice
-- Implemented Sign Out
-- Update Profile
-
-# Features
-
-- Login/Signup
-   - SignIn,SignUp Form
-   - redirect to Browse Page
-
-- Broswe (after authentication)
-   - Header
-   - Main Movie
-   - Trailer in Background
-   - Title & Description
-   - Movie Suggestions
-       - MoviesList * n
-
-    
-- Netflix GPT
-   - Search Bar
-   - Movie Suggestions
+- Used TMDB API for showing movies
+- Used Gemini API for movies suggestions
